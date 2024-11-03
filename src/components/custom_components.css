@@ -1,0 +1,197 @@
+.default-container {
+	display: flex;
+	position: relative;
+	min-height: 46px;
+	padding: 0px 5px 0px;
+	box-sizing: border-box;
+	min-width: fit-content;
+}
+
+.name {
+	color: #058E21;
+	background-color: #E3E8E4;
+	font-weight: bold;
+	position: absolute;
+	margin: 0px 0px 0px 14px;
+	text-align: left;
+}
+
+.default-box, .toggle-button > label {
+	position: absolute;
+	top: 8px;
+	right: 0px;
+	left: 0px;
+	min-height: 30px;
+	font-size: 14px;
+	font-weight: bold;
+	background-color: rgba(255, 255, 255, 0);
+	border: 2px solid #058E21;
+	border-radius: 5px;
+	color: #058E21;
+	box-sizing: border-box;
+	padding: 0px 10px 0px;
+	transition: all 0.3s ease;
+}
+
+.default-box[type="search"]:focus {
+	outline: none;
+
+}
+
+.default-box[type="search"]::placeholder {
+	color: #058E21;
+
+}
+
+.default_box:focus {
+	outline: none;
+}
+
+.button-container {
+	display: flex;
+	position: relative;
+	min-height: 46px;
+	padding: 0px 5px 0px;
+	box-sizing: border-box;
+}
+
+.button {
+	position: absolute;
+	right: 0px;
+	left: 0px;
+	height: 32px;
+	border: 2px solid #058E21;
+	background-color: #ffffff00;
+	color: #058E21;
+	text-align: center;
+	text-decoration: none;
+	font-size: 14px;
+	border-radius: 5px;
+	min-width: fit-content;
+}
+
+.button:active {
+	background-color: #058E21;
+	color: #ffffff;
+}
+
+.button-name {
+	margin: 0px;
+}
+
+.custom-select:focus {
+	outline: none;
+}
+
+/* .custom-select > option:focus{
+	background-color: #058E21;
+	background: white;
+} */
+
+.custom-select > option {
+	background-color: #058E21;
+	color: white;
+	width: 100%;
+	outline: none;
+}
+
+
+.progress-bar {
+	width: 109px;
+	height: 109px;
+	position: relative;
+}
+
+.progress-bar > .outer-cir {
+	box-sizing: border-box;
+	width: 109px;
+	height: 109px;
+	border-radius: 50%;
+	box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.3),
+	-6px -6px 10px -1px rgba(255, 255, 255, 0.3);
+	padding: 15px;
+}
+
+.progress-bar > .outer-cir > .inner-circle {
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.3),
+		inset -4px -4px 6px -1px rgba(255, 255, 255, 0.3),
+		-0.5px -0.5px 0px #E3E8E4,
+		 0.5px 0.5px 0px #E3E8E4,
+		0.5px 0.5px 0px #E3E8E4,
+		 -0.5px -0.5px 0px #E3E8E4;
+}
+
+#page-number {
+	font-size: 50px;
+	color: #058E21;
+	font-weight: bold;
+}
+
+
+.custom-div {
+	min-width: fit-content;
+}
+
+.toggle-button {
+	position: relative;
+	user-select: none;
+	height: 50px;
+}
+
+.toggle-button > input[type="checkbox"] {
+	display:  none;
+}
+
+.toggle-button > label {
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	user-select: none;
+	transition: all 0.3ms ease;
+}
+
+
+.toggle-button > input[type="checkbox"]:checked + label {
+	position: absolute;
+	background-color: #058E21;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	user-select: none;
+	color: white;
+}
+
+circle {
+	fill: none;
+	stroke: url(#GradientColor);
+	stroke-width: 14px;
+	stroke-dasharray: 294;
+	transform :rotate(-90 80 80);
+	/* stroke-dashoffset: 294; */
+	transition: stroke-dashoffset 1s ease;
+	/* animation: progress-anim 2s linear forwards; */
+	stroke-linecap:round;
+}
+
+svg {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+
+@keyframes progress-anim {
+	100% {
+		stroke-dashoffset: 196;
+	}
+}

@@ -1,0 +1,11 @@
+.select-container {
+	width: 77%;
+}
+
+.main-container {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 15px;
+}
