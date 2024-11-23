@@ -1,0 +1,86 @@
+
+
+.school-item-container {
+	box-sizing: border-box;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	display: flex;
+	flex-direction: column;
+	/* height: 100%; */
+	gap: 10px;
+	align-items: center;
+}
+
+.school-item {
+	min-height: 75px;
+	min-width: 75px;
+	border: 2px solid var(--main-color);
+	border-radius: 40px 10px 10px 10px;
+	max-width: 77%;
+	width: 77%;
+	display: grid;
+	grid-template-columns: 75px 1fr 75px;
+
+}
+
+.blank-image {
+	grid-column: 0/1;
+	justify-self: center;
+	align-self: center;
+	width: 60px;
+	height: 60px;
+	background: -webkit-linear-gradient(270deg, rgba(14,89,95,1) 0%, rgba(4,148,26,1) 100%);
+	border-radius: 30px 5px 5px 5px;
+}
+
+.school-info {
+	display: flex;
+	flex-direction: column;
+	justify-items: start;
+	justify-content: center;
+	overflow: hidden;
+	width: 100%;
+	transition: transform 0.3s ease-in;
+}
+
+.school-item:hover {
+	transform: scale(1.01);
+}
+
+.item-label {
+	color: var(--main-color);
+	text-align: left;
+	padding: 0px;
+	margin: 0px;
+	white-space: nowrap; /* Prevent wrapping */
+	overflow: hidden; /* Hide overflow */
+	text-overflow: ellipsis; /* Add ellipsis when overflow occurs */
+	width: 100%; /* Ensure full width for overflow */
+	font-size: 12px;
+	line-height:1.1rem;
+}
+
+.item-label > span {
+	font-weight: bold;
+}
+
+
+.ratings {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.ratings > img {
+	width: 20px;
+	height: 20px;
+}
+
+.ratings > p {
+	color: var(--main-color);
+	font-weight: bold;
+	font-style: italic;
+	margin: 0px;
+	font-size: 10px;
+}
