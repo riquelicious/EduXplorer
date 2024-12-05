@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/EduXplorer/static/css/main.fc8c77b3.css",
-    "main.js": "/EduXplorer/static/js/main.160a8ef7.js",
+    "main.css": "/EduXplorer/static/css/main.d454cc8d.css",
+    "main.js": "/EduXplorer/static/js/main.a45fb0a3.js",
     "static/js/453.96487c22.chunk.js": "/EduXplorer/static/js/453.96487c22.chunk.js",
     "static/media/NotoSans-VariableFont_wdth,wght.ttf": "/EduXplorer/static/media/NotoSans-VariableFont_wdth,wght.b1d0ab70303caea663db.ttf",
     "static/media/HomeIcon.png": "/EduXplorer/static/media/HomeIcon.1f45833af5bd6e9fb980.png",
-    "static/media/medal.svg": "/EduXplorer/static/media/medal.97f90cb6f5cf8d9b253d1adbe8f54ba3.svg",
+    "static/media/medal.svg": "/EduXplorer/static/media/medal.b1011789f4440ee7dca4892459497d02.svg",
     "index.html": "/EduXplorer/index.html",
-    "static/media/backButton.svg": "/EduXplorer/static/media/backButton.4c8cec7b3b402232cc6dd45285bf9b64.svg",
-    "main.fc8c77b3.css.map": "/EduXplorer/static/css/main.fc8c77b3.css.map",
-    "main.160a8ef7.js.map": "/EduXplorer/static/js/main.160a8ef7.js.map",
+    "static/media/backButton.svg": "/EduXplorer/static/media/backButton.b731f003e1a44c2788af2bb1deff8bbb.svg",
+    "main.d454cc8d.css.map": "/EduXplorer/static/css/main.d454cc8d.css.map",
+    "main.a45fb0a3.js.map": "/EduXplorer/static/js/main.a45fb0a3.js.map",
     "453.96487c22.chunk.js.map": "/EduXplorer/static/js/453.96487c22.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.fc8c77b3.css",
-    "static/js/main.160a8ef7.js"
+    "static/css/main.d454cc8d.css",
+    "static/js/main.a45fb0a3.js"
   ]
 }
