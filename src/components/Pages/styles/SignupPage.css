@@ -1,0 +1,40 @@
+.SignupPage {
+  flex: 1;
+  display: grid;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  justify-items: center;
+  width: 100%;
+  height: 100vh;
+  grid-template-rows: 1fr 15%;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-content: end;
+  justify-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.already-have-account {
+  color: #058e21;
+  text-align: left;
+  justify-self: left;
+  padding: 0px 15px 10px;
+  cursor: pointer;
+}
+
+.SignupHomeIcon {
+  height: 200px;
+}
+
+.signup-button,
+.email,
+.password {
+  width: 280px;
+}

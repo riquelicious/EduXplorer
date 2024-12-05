@@ -5,14 +5,14 @@
   justify-content: center;
   justify-items: center;
   height: 100vh;
-  /* TODO width: 100vw; */
-  grid-template-rows: 1fr 30px 15%;
+  /* padding-top: 50px; */
+  grid-template-rows: 1fr 50px 20%;
 }
 
-.header {
+.login-header {
   display: grid;
   align-items: center;
-  align-content: center;
+  align-content: end;
   justify-content: center;
   justify-items: center;
   width: 100%;
@@ -20,28 +20,17 @@
 }
 
 .footer {
-  background: rgb(14, 89, 95);
-  background: -moz-linear-gradient(
-    0deg,
-    rgba(14, 89, 95, 1) 0%,
-    rgba(4, 148, 26, 1) 100%
-  );
-  background: -webkit-linear-gradient(
-    0deg,
-    rgba(14, 89, 95, 1) 0%,
-    rgba(4, 148, 26, 1) 100%
-  );
   background: linear-gradient(
     0deg,
     rgba(14, 89, 95, 1) 0%,
     rgba(4, 148, 26, 1) 100%
   );
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0e595f",endColorstr="#04941a",GradientType=1);
   width: 100vw;
   height: 100%;
 }
 
-.forgot-password {
+.forgot-password,
+.goto-signup {
   color: #058e21;
   text-align: left;
   justify-self: left;
@@ -57,4 +46,12 @@
 .email,
 .password {
   width: 280px;
+}
+
+.error-message {
+  grid-row: 2/3;
+}
+
+.goto-signup {
+  cursor: pointer;
 }

@@ -1,15 +1,31 @@
-
 .App {
-	--background-color: #E3E8E4;
-	--main-color: #058E21;
-	--gradient-color: linear-gradient(180deg, rgba(14,89,95,1) 0%, rgba(4,148,26,1) 100%);
-	position: relative;
-  	text-align: center;
-	align-content: center;
-	height: 100vh;
-	overflow: hidden;
-	background-color: var(--background-color);
-	width: 100%;
+  --background-color: #e3e8e4;
+  --main-color: #058e21;
+  --main-color-disabled: #666666;
+  --gradient-color: linear-gradient(
+    180deg,
+    rgba(14, 89, 95, 1) 0%,
+    rgba(4, 148, 26, 1) 100%
+  );
+  position: relative;
+  text-align: center;
+  align-content: center;
+  background-color: #212124;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  /* padding-top: 177.78%; */
+}
+
+.app-contents {
+  background-color: var(--background-color);
+  display: flex;
+  position: relative;
+  height: 100vh; /* Or any fixed height */
+  width: calc(100vh * 9 / 16); /* Calculate the width based on height */
+  overflow: hidden;
+  justify-content: center;
 }
 
 ::selection {
@@ -29,25 +45,29 @@
 }
 
 *::-webkit-scrollbar {
-	width: 10px; /* scrollbar width */
-	background-color: transparent;
+  width: 10px; /* scrollbar width */
+  background-color: transparent;
 }
 
 *::-webkit-scrollbar-track {
-	margin: 10px;
-	background: #C2D6C6; /* track color */
-	border-radius: 30px;
-
+  margin: 10px;
+  background: #c2d6c6; /* track color */
+  border-radius: 30px;
 }
 
-
 *::-webkit-scrollbar-thumb {
-	background-color: #07852C; /* thumb color */
+  background-color: #07852c; /* thumb color */
 
-	border-radius: 10px;
-	transition: all 0.8s ease;
+  border-radius: 10px;
+  transition: all 0.8s ease;
 }
 
 *:focus {
-	outline: 1px solid var(--main-color);
+  /* outline: 1px solid var(--main-color); */
+  outline: none;
+}
+
+.error-message {
+  color: red;
+  font-size: 12px;
 }

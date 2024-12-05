@@ -1,9 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { AppProvider } from "./context/AppContext";
 
 import "./App.css";
 import LoginPage from "./components/Pages/LoginPage";
+import SignupPage from "./components/Pages/SignupPage";
 import MainForm from "./components/Pages/MainForm";
 import LocationForm from "./components/Pages/LocationForm";
 import LevelForm from "./components/Pages/LevelForm";
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
   {
     path: "/EduXplorer/",
     element: <LoginPage />,
+  },
+  {
+    path: "/EduXplorer/Signup/",
+    element: <SignupPage />,
   },
   {
     path: "/EduXplorer/Form/",
@@ -57,13 +62,15 @@ const router = createBrowserRouter([
 
 function App() {
   useEffect(() => {
-    document.title = "EduXplorer"; // Sets the title
+    document.title = "EduXplorer"; // Sets the
   }, []);
 
   return (
     <AppProvider>
       <div className="App">
-        <RouterProvider router={router} />
+        <div className="app-contents">
+          <RouterProvider router={router} />
+        </div>
       </div>
     </AppProvider>
   );

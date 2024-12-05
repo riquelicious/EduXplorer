@@ -2,12 +2,12 @@ import { RoundProgressBar, Button } from "../custom_components";
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "./styles/FormTemplate.css";
-import { useAppContext } from "../../context/AppContext";
+import { usePaginationContext } from "../../context/AppContext";
 
 function FormTemplate({ children, className = "" }) {
   const navigate = useNavigate();
   const [pageTitle, setPageTitle] = useState("Location");
-  const { pageCount, setPageCount } = useAppContext();
+  const { pageCount, setPageCount, pageLocked } = usePaginationContext();
   const [progressPercent, setProgress] = useState(294);
   const [pageInfo, setPageInfo] = useState(
     "INFO: Please select your province, region, city, and barangay to help us find schools near you."
@@ -64,7 +64,12 @@ function FormTemplate({ children, className = "" }) {
           onClick={prevPage}
           disabled={pageCount === 1}
         />
-        <Button className="nav-button" buttonName="Next" onClick={nextPage} />
+        <Button
+          className="nav-button"
+          buttonName="Next"
+          onClick={nextPage}
+          disabled={pageLocked}
+        />
       </div>
     </div>
   );

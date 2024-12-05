@@ -3,43 +3,45 @@ import { useNavigate } from "react-router-dom";
 import iBack from "../assets/img/backButton.svg";
 import iMedal from "../assets/img/medal.svg";
 
-export function TextBox({
-  type = "text",
-  boxName,
-  className = "",
-  autoComplete,
-  required,
-  onChange,
-}) {
-  if (boxName == null) {
-    boxName = "boxName";
+export function TextBox(props) {
+  if (props.boxName == null) {
+    props.boxName = "boxName";
   }
   return (
-    <div className={`default-container ${className}`}>
+    <div className={`default-container container-color  ${props.className}`}>
       <input
-        type={type}
-        onChange={onChange}
+        minLength={props.minLength}
+        type={props.type}
+        onChange={props.onChange}
         className="default-box"
-        autoComplete={autoComplete}
-        required={required}
+        autoComplete={props.autoComplete}
+        required={props.required}
       />
-      <p className="name">{boxName}</p>
+      <p className="name">{props.boxName}</p>
     </div>
   );
 }
 
-export function DropDown({ name, className = "", items = [] }) {
-  if (name == null) {
-    name = "dropDownName";
+export function DropDown(props) {
+  if (props.name == null) {
+    props.name = "dropDownName";
   }
   return (
-    <div className={`default-container drop-down ${className}`}>
-      <select placeholder={"..."} className="default-box custom-select">
-        {items.map((item) => {
-          return <option key={item}>{item}</option>;
-        })}
+    <div
+      className={`default-container drop-down ${
+        props.disabled ? "container-color-disabled" : "container-color"
+      } ${props.className} `}
+    >
+      <select
+        placeholder={"..."}
+        className="default-box custom-select"
+        disabled={props.disabled}
+        onChange={props.onChange}
+      >
+        <option value="">...</option>
+        {props.children}
       </select>
-      <p className="name">{name}</p>
+      <p className="name">{props.name}</p>
     </div>
   );
 }
@@ -99,47 +101,54 @@ export function RoundProgressBar({ pageCount, strokeDashoffset = 0 }) {
   );
 }
 
-export function NamedDiv({ name, className = "", children }) {
+export function NamedDiv(props) {
   return (
-    <div className={`default-container ${className}`}>
-      <div className="default-box custom-div">{children}</div>
-      <p className="name">{name}</p>
+    <div
+      className={`default-container 
+      ${props.disabled ? "container-color-disabled" : "container-color"}
+    ${props.className}`}
+    >
+      <div className="default-box custom-div">{props.children}</div>
+      <p className="name">{props.name}</p>
     </div>
   );
 }
 
-export function NamedContainer({ name, className = "", children }) {
+export function NamedContainer(props) {
   return (
-    <div className={`default-container ${className}`}>
-      <div className="named-container-box">{children}</div>
-      <p className="name">{name}</p>
+    <div
+      className={`default-container 
+    ${props.disabled ? "container-color-disabled" : "container-color"}
+    ${props.className}`}
+    >
+      <div className="named-container-box">{props.children}</div>
+      <p className="name">{props.name}</p>
     </div>
   );
 }
 
-export function SearchBar({ className = "" }) {
+export function SearchBar(props) {
   return (
-    <div className={`default-container ${className}`}>
+    <div className={`default-container ${props.className}`}>
       <input
         placeholder="..."
         className="default-box"
         type="search"
         name=""
         id=""
+        onChange={props.onChange}
       />
     </div>
   );
 }
 
-export function ToggleButton({
-  className = "",
-  unique_key = 0,
-  labelContents = "Course: Insert Course",
-}) {
+export function ToggleButton(props) {
   return (
-    <div className={`default-container toggle-button ${className}`}>
-      <input id={`toggle-button-${unique_key}`} type="checkbox" />
-      <label htmlFor={`toggle-button-${unique_key}`}>{labelContents}</label>
+    <div className={`default-container toggle-button ${props.className}`}>
+      <input id={`toggle-button-${props.unique_key}`} type="checkbox" />
+      <label htmlFor={`toggle-button-${props.unique_key}`}>
+        {props.children}
+      </label>
     </div>
   );
 }

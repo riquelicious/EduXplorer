@@ -1,7 +1,18 @@
+.container-color {
+  color: var(--main-color);
+  border-color: var(--main-color);
+}
+
+.container-color-disabled {
+  color: var(--main-color-disabled);
+  border-color: var(--main-color-disabled);
+  pointer-events: none;
+}
+
 .default-container {
   display: flex;
   position: relative;
-  min-height: 46px;
+  min-height: 56px;
   padding: 0px 5px 0px;
   box-sizing: border-box;
   min-width: fit-content;
@@ -9,39 +20,40 @@
 }
 
 .name {
-  color: #058e21;
-  background-color: #e3e8e4;
+  color: inherit;
+  background-color: var(--background-color);
   font-weight: bold;
   position: absolute;
-  margin: 0px 0px 0px 14px;
+  margin: 0px 0px 0px 0.5rem;
   text-align: left;
+  font-size: 0.75rem;
 }
 
 .default-box,
 .toggle-button > label {
   position: absolute;
-  top: 8px;
+  top: 0.5rem;
   right: 0px;
   left: 0px;
-  min-height: 30px;
+  min-height: 40px;
   font-size: 14px;
   font-weight: bold;
   background-color: rgba(255, 255, 255, 0);
-  border: 2px solid #058e21;
+  border: 0.15rem solid;
+  color: inherit;
   border-radius: 5px;
-  color: #058e21;
   box-sizing: border-box;
   padding: 0px 10px 0px;
   transition: all 0.3s ease;
 }
 
 .default-box[type="search"]::placeholder {
-  color: #058e21;
+  color: inherit;
 }
 
 .button {
   height: 32px;
-  border: 2px solid #058e21;
+  border: 0.15rem solid #058e21;
   background-color: #ffffff00;
   color: #058e21;
   text-align: center;
@@ -191,9 +203,10 @@ svg {
   font-size: 14px;
   font-weight: bold;
   background-color: rgba(255, 255, 255, 0);
-  border: 2px solid #058e21;
+  border: 2px solid;
+  border-color: inherit;
   border-radius: 5px;
-  color: #058e21;
+  color: inherit;
   box-sizing: border-box;
   padding: 0px 10px 0px;
   transition: all 0.3s ease;
